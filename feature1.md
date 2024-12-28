@@ -7,6 +7,8 @@ title: Feature 1
 
 Detailed description of Feature 1. This page can include:
 
+![Image description](/assets/images/becomePhysician.png)
+
 - In-depth explanation
 - Usage examples
 - Configuration options

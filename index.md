@@ -3,9 +3,9 @@ layout: default
 title: Home
 ---
 
-## Welcome to Our Project
+## Practitioner and Organization Relationship
 
-Here's an overview of our main features:
+To ensure data accuracy based on mutual attestation, we can implement logic that validates the agreement between a practitioner and an organization before inserting the relationship into the database. This can be achieved by creating a **staging table** for unverified relationships and adding a **stored procedure** that validates mutual attestation.
 
 <div class="feature-grid">
     <div class="feature-card">
