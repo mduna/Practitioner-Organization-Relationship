@@ -1,24 +1,23 @@
 ---
 layout: default
-title: Project Name
+title: Home
 ---
 
-## About This Project
+## Welcome to Our Project
 
-Welcome to my project! This is where you can provide a detailed description of what your project does,
-why you created it, and how it can help others.
+Here's an overview of our main features:
 
 <div class="feature-grid">
     <div class="feature-card">
         <h3>Feature 1</h3>
-        <p>Description of your first main feature. Explain what it does and why it's useful.</p>
+        <p>Brief overview of Feature 1. <a href="{{ '/feature1' | relative_url }}">Learn more →</a></p>
     </div>
     <div class="feature-card">
         <h3>Feature 2</h3>
-        <p>Description of your second feature. Keep it concise but informative.</p>
+        <p>Brief overview of Feature 2. <a href="{{ '/feature2' | relative_url }}">Learn more →</a></p>
     </div>
     <div class="feature-card">
         <h3>Feature 3</h3>
-        <p>Description of your third feature. Highlight what makes it special.</p>
+        <p>Brief overview of Feature 3. <a href="{{ '/feature3' | relative_url }}">Learn more →</a></p>
     </div>
 </div>

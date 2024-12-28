@@ -1,7 +1,17 @@
-title: Project Name
+title: Relationship between Practitioner and Organization
 description: A brief tagline for your project
 github_username: username
 repository: username/repository-name
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
 - jekyll-remote-theme
+
+navigation:
+  - title: Home
+    url: /
+  - title: Feature 1
+    url: /feature1
+  - title: Feature 2
+    url: /feature2
+  - title: Feature 3
+    url: /feature3
