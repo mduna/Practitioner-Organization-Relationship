@@ -5,7 +5,7 @@ title: Home
 
 ## Practitioner and Organization Relationship
 
-To ensure data accuracy based on mutual attestation, we can implement logic that validates the agreement between a practitioner and an organization before inserting the relationship into the database. This can be achieved by creating a **staging table** for unverified relationships and adding a **stored procedure** that validates mutual attestation.
+### <a href="{{ '/feature1' | relative_url }}">Data Model</a>
 
 <div class="feature-grid">
     <div class="feature-card">
