@@ -1,0 +1,48 @@
+@startuml
+entity "Practitioner" {
+    + PractitionerID (PK)
+    --
+    FirstName
+    LastName
+    Specialty
+    ContactInfo
+}
+
+entity "Organization" {
+    + OrganizationID (PK)
+    --
+    Name
+    Address
+    ContactInfo
+}
+
+entity "PractitionerOrganizationRelationship" {
+    + RelationshipID (PK)
+    --
+    PractitionerID (FK)
+    OrganizationID (FK)
+    StartDate
+    EndDate
+    Notes
+}
+
+entity "RelationshipType" {
+    + RelationshipTypeID (PK)
+    --
+    Name
+    Description
+}
+
+entity "PractitionerOrganizationRelationshipType" {
+    + RelationshipID (FK)
+    + RelationshipTypeID (FK)
+    --
+    (PK: RelationshipID + RelationshipTypeID)
+}
+
+
+Practitioner ||--o{ PractitionerOrganizationRelationship : "has relationships"
+Organization ||--o{ PractitionerOrganizationRelationship : "has relationships"
+PractitionerOrganizationRelationship ||--o{ PractitionerOrganizationRelationshipType : "has types"
+RelationshipType ||--o{ PractitionerOrganizationRelationshipType : "defines types"
+@enduml
