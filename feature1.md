@@ -49,9 +49,8 @@ To model the scenario where a practitioner has multiple relationships with organ
 
 ### SQL script to create the schema
 
-**Practitioner Table**
-`
-CREATE TABLE Practitioner (
+**Practitioner Table**  
+`CREATE TABLE Practitioner (
     PractitionerID INT PRIMARY KEY AUTO_INCREMENT,
     FirstName VARCHAR(100) NOT NULL,
     LastName VARCHAR(100) NOT NULL,
@@ -60,7 +59,7 @@ CREATE TABLE Practitioner (
 );
 `
 
-**Organization Table**
+**Organization Table**  
 `CREATE TABLE Organization (
     OrganizationID INT PRIMARY KEY AUTO_INCREMENT,
     Name VARCHAR(255) NOT NULL,
@@ -69,9 +68,8 @@ CREATE TABLE Practitioner (
 );
 `
 
-**PractitionerOrganizationRelationship Table**
-`
-CREATE TABLE PractitionerOrganizationRelationship (
+**PractitionerOrganizationRelationship Table**  
+`CREATE TABLE PractitionerOrganizationRelationship (
     RelationshipID INT PRIMARY KEY AUTO_INCREMENT,
     PractitionerID INT NOT NULL,
     OrganizationID INT NOT NULL,
@@ -82,18 +80,16 @@ CREATE TABLE PractitionerOrganizationRelationship (
     FOREIGN KEY (OrganizationID) REFERENCES Organization(OrganizationID) ON DELETE CASCADE
 );
 `
-**RelationshipType Table**
-`
-CREATE TABLE RelationshipType (
+**RelationshipType Table**  
+`CREATE TABLE RelationshipType (
     RelationshipTypeID INT PRIMARY KEY AUTO_INCREMENT,
     Name VARCHAR(100) NOT NULL UNIQUE,
     Description TEXT
 );
 `
 
-**PractitionerOrganizationRelationshipType Table**
-`
-CREATE TABLE PractitionerOrganizationRelationshipType (
+**PractitionerOrganizationRelationshipType Table**  
+`CREATE TABLE PractitionerOrganizationRelationshipType (
     RelationshipID INT NOT NULL,
     RelationshipTypeID INT NOT NULL,
     PRIMARY KEY (RelationshipID, RelationshipTypeID),

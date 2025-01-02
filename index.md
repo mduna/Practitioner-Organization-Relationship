@@ -9,8 +9,8 @@ To ensure data accuracy based on mutual attestation, we can implement logic that
 
 <div class="feature-grid">
     <div class="feature-card">
-        <h3>Staging Tables</h3>
-        <p>Brief overview of Feature 1. <a href="{{ '/feature1' | relative_url }}">Learn more →</a></p>
+        <h3>Database Model</h3>
+        <p>Practitioner and Organization Relationship Database Model <a href="{{ '/feature1' | relative_url }}">Learn more →</a></p>
     </div>
     <div class="feature-card">
         <h3>Feature 2</h3>
