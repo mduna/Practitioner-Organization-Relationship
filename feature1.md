@@ -45,7 +45,7 @@ To model the scenario where a practitioner has multiple relationships with organ
 
 
 ### Model Diagram
-![Diagram Overview](/assets/images/modelDiagram.png)
+![Diagram Overview](/out/imageSource/modelDiagram/modelDiagram.png)
 
 Detailed description of Feature 1. This page can include:
 
