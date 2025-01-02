@@ -79,15 +79,15 @@ To model the scenario where a practitioner has multiple relationships with organ
     FOREIGN KEY (PractitionerID) REFERENCES Practitioner(PractitionerID) ON DELETE CASCADE,
     FOREIGN KEY (OrganizationID) REFERENCES Organization(OrganizationID) ON DELETE CASCADE
 );
-`
+`  
+
 **RelationshipType Table**  
 `CREATE TABLE RelationshipType (
     RelationshipTypeID INT PRIMARY KEY AUTO_INCREMENT,
     Name VARCHAR(100) NOT NULL UNIQUE,
     Description TEXT
 );
-`
-
+`  
 **PractitionerOrganizationRelationshipType Table**  
 `CREATE TABLE PractitionerOrganizationRelationshipType (
     RelationshipID INT NOT NULL,
