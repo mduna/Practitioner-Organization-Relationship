@@ -8,7 +8,8 @@ title: Ensure data Accuracy
 To ensure data accuracy based on mutual attestation, we can implement logic that validates the agreement between a practitioner and an organization before inserting the relationship into the database. This can be achieved by creating a staging table for unverified relationships and adding a stored procedure that validates mutual attestation.
 
 ### Staging Table Schema
-**Staging Table for Unverified Relationships**
+**Staging Table for Unverified Relationships**  
+
 `CREATE TABLE StagingPractitionerOrganizationRelationship (
     StagingID INT PRIMARY KEY AUTO_INCREMENT,
     PractitionerID INT NOT NULL,
@@ -21,8 +22,10 @@ To ensure data accuracy based on mutual attestation, we can implement logic that
     FOREIGN KEY (OrganizationID) REFERENCES Organization(OrganizationID) ON DELETE CASCADE,
     FOREIGN KEY (RelationshipTypeID) REFERENCES RelationshipType(RelationshipTypeID) ON DELETE CASCADE
 );
-`
-### Stored Procedure for Mutual Attestation Validation
+`  
+
+### Stored Procedure for Mutual Attestation Validation  
+
 `DELIMITER $$
 
 CREATE PROCEDURE ValidateAndInsertRelationship()
@@ -80,10 +83,8 @@ BEGIN
               AND RelationshipTypeID = pRelationshipTypeID;
         END IF;
     END LOOP;
-
     CLOSE cur;
 END$$
-
 DELIMITER ;
 `
 
