@@ -71,7 +71,8 @@ CREATE TABLE Organization (
 ```
 
 **PractitionerOrganizationRelationship Table**  
-`CREATE TABLE PractitionerOrganizationRelationship (
+```
+CREATE TABLE PractitionerOrganizationRelationship (
     RelationshipID INT PRIMARY KEY AUTO_INCREMENT,
     PractitionerID INT NOT NULL,
     OrganizationID INT NOT NULL,
@@ -81,24 +82,27 @@ CREATE TABLE Organization (
     FOREIGN KEY (PractitionerID) REFERENCES Practitioner(PractitionerID) ON DELETE CASCADE,
     FOREIGN KEY (OrganizationID) REFERENCES Organization(OrganizationID) ON DELETE CASCADE
 );
-`  
+```
 
 **RelationshipType Table**  
-`CREATE TABLE RelationshipType (
+```
+CREATE TABLE RelationshipType (
     RelationshipTypeID INT PRIMARY KEY AUTO_INCREMENT,
     Name VARCHAR(100) NOT NULL UNIQUE,
     Description TEXT
 );
-`  
+``` 
+
 **PractitionerOrganizationRelationshipType Table**  
-`CREATE TABLE PractitionerOrganizationRelationshipType (
+```
+CREATE TABLE PractitionerOrganizationRelationshipType (
     RelationshipID INT NOT NULL,
     RelationshipTypeID INT NOT NULL,
     PRIMARY KEY (RelationshipID, RelationshipTypeID),
     FOREIGN KEY (RelationshipID) REFERENCES PractitionerOrganizationRelationship(RelationshipID) ON DELETE CASCADE,
     FOREIGN KEY (RelationshipTypeID) REFERENCES RelationshipType(RelationshipTypeID) ON DELETE CASCADE
 );
-`
+```
 
 
 [← Back to Home]({{ '/' | relative_url }})
