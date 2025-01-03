@@ -50,23 +50,25 @@ To model the scenario where a practitioner has multiple relationships with organ
 ### SQL script to create the schema
 
 **Practitioner Table**  
-`CREATE TABLE Practitioner (
+```
+CREATE TABLE Practitioner (
     PractitionerID INT PRIMARY KEY AUTO_INCREMENT,
     FirstName VARCHAR(100) NOT NULL,
     LastName VARCHAR(100) NOT NULL,
     Specialty VARCHAR(100),
     ContactInfo VARCHAR(255)
 );
-`
+```
 
 **Organization Table**  
-`CREATE TABLE Organization (
+```
+CREATE TABLE Organization (
     OrganizationID INT PRIMARY KEY AUTO_INCREMENT,
     Name VARCHAR(255) NOT NULL,
     Address VARCHAR(255),
     ContactInfo VARCHAR(255)
 );
-`
+```
 
 **PractitionerOrganizationRelationship Table**  
 `CREATE TABLE PractitionerOrganizationRelationship (
