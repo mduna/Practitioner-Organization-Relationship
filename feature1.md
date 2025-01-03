@@ -82,7 +82,7 @@ CREATE TABLE PractitionerOrganizationRelationship (
     FOREIGN KEY (PractitionerID) REFERENCES Practitioner(PractitionerID) ON DELETE CASCADE,
     FOREIGN KEY (OrganizationID) REFERENCES Organization(OrganizationID) ON DELETE CASCADE
 );
-```
+```  
 
 **RelationshipType Table**  
 ```
@@ -91,7 +91,8 @@ CREATE TABLE RelationshipType (
     Name VARCHAR(100) NOT NULL UNIQUE,
     Description TEXT
 );
-``` 
+```  
+ 
 
 **PractitionerOrganizationRelationshipType Table**  
 ```
