@@ -9,8 +9,8 @@ To ensure data accuracy based on mutual attestation, we can implement logic that
 
 ### Staging Table Schema
 **Staging Table for Unverified Relationships**  
-
-```CREATE TABLE StagingPractitionerOrganizationRelationship (
+```
+CREATE TABLE StagingPractitionerOrganizationRelationship (
     StagingID INT PRIMARY KEY AUTO_INCREMENT,
     PractitionerID INT NOT NULL,
     OrganizationID INT NOT NULL,
@@ -22,11 +22,12 @@ To ensure data accuracy based on mutual attestation, we can implement logic that
     FOREIGN KEY (OrganizationID) REFERENCES Organization(OrganizationID) ON DELETE CASCADE,
     FOREIGN KEY (RelationshipTypeID) REFERENCES RelationshipType(RelationshipTypeID) ON DELETE CASCADE
 );
-``` 
+```  
+
 
 ### Stored Procedure for Mutual Attestation Validation  
-
-```DELIMITER $$
+```
+DELIMITER $$
 
 CREATE PROCEDURE ValidateAndInsertRelationship()
 BEGIN
