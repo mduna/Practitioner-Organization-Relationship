@@ -1,16 +1,13 @@
 ---
 layout: default
-title: Feature 3
+title: Mermaid Diagram
 ---
 
-## Feature 3
+```mermaid
+graph TD
+    A[Start] --> B{Decision}
+    B -->|Yes| C[Do something]
+    B -->|No| D[Do something else]
 
-Detailed description of Feature 3. This page can include:
-
-- Feature highlights
-- Step-by-step tutorials
-- Advanced configurations
-- Integration examples
-- Performance tips
 
 [← Back to Home]({{ '/' | relative_url }})
