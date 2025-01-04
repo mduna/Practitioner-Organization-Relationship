@@ -37,7 +37,9 @@ federal platform for QHP eligibility and enrollment. The Machine-readable URL PU
 
 | Variable Name | Variable Definition | Data Type | Variable Label | Allowabe Values | Data Source | Field Name from Data Source | Comments |
 |===|===|===|===|===|===|===|===|
-| State | Two-charcter state abreviation indicating the state where the issuer operates in | Text | State | All 50 state abbreviations + territory abbreivations |system-generated field | | State | N/A|
+| State | Two-charcter state abreviation indicating the state where the issuer operates in | Text | State | All 50 state abbreviations + territory abbreivations |system-generated field |State | N/A|
+| Issuer ID | Five-digit numeric code that identifies the issuer organization in the Health Insurance Oversight System (HIOS)| Text | Issuer ID | Free Text | System-generated filed | Issuer ID | N/A|
+
 
 
 
