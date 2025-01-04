@@ -38,7 +38,11 @@ federal platform for QHP eligibility and enrollment. The Machine-readable URL PU
 | Variable Name | Variable Definition | Data Type | Variable Label | Allowabe Values | Data Source | Field Name from Data Source | Comments |
 |===|===|===|===|===|===|===|===|
 | State | Two-charcter state abreviation indicating the state where the issuer operates in | Text | State | All 50 state abbreviations + territory abbreivations |system-generated field |State | N/A|
+| Issuer Name | The name of the issuer organization | Text | Issuer Name | Free Text | system-generated field | Issure Name | This field is only available for the 2016 datasets |
 | Issuer ID | Five-digit numeric code that identifies the issuer organization in the Health Insurance Oversight System (HIOS)| Text | Issuer ID | Free Text | System-generated filed | Issuer ID | N/A|
+| URL Submitted | The URL containing the issuer's machine-readable provider, formulary, and plan JSON URLs | Text | URL Submitted | Free Text | Qultrics for the 2016 throught 2022 datasets; HIOS Supplemetal Submission Module (SSM) for the 2023 dataset; Marketplace plan Management System (MPMS) fpr tje 2-24 amd 2025 datasets | URL Submitted | N/A |
+| Tech POD Email | The email of the technical point of contact for the issuer organization | Text | Technical POC Email | Free Text |  Qultrics for the 2016 throught 2022 datasets; HIOS Supplemetal Submission Module (SSM) for the 2023 dataset; Marketplace plan Management System (MPMS) fpr tje 2-24 amd 2025 datasets | Technical POC email | N/A |
+
 
 
 
