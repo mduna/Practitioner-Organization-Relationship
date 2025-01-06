@@ -66,24 +66,24 @@ There are four types of machine-readable data files:
 - **[Provider](https://developer.cms.gov/marketplace-api/coverage-portal/#/schema/providers)**
 
 #### My comments to the providers' schema
-**Current Schema Behavior**
+##### **Current Schema Behavior**
 1. **Multiple Addresses:** The individual definition allows for multiple addresses.
 2. **Multiple Plans:** The individual definition also allows for multiple plans.
 3. **Global accepting Property:** The accepting property is defined at the practitioner level, not at the address or plan level.  
 
-**This setup implies that:**
+##### **This setup implies that:**
 1. **Acceptance for New Patients** (accepting) applies globally to the practitioner and does not account for variability across addresses or plans.
 2. It is not possible to specify that a particular address accepts new patients for only a subset of the plans.
 
-**Implications**
+##### **Implications**
 The schema lacks the granularity to represent cases where:
 1. A specific address accepts new patients only for certain plans.
 2. Another address may accept new patients for all plans.
 If any address or plan has a different acceptance status, it cannot be captured accurately.
 
-**Potential Solution**
+##### **Potential Solution**
 To address this limitation, the schema could be modified to include the accepting status at a more granular level.  
-1. **Associate plans with address**  
+###### **Associate plans with address**  
 
 ```json
 "addresses": {
@@ -119,9 +119,9 @@ To address this limitation, the schema could be modified to include the acceptin
     },
     "minItems": 1
 }
+```
 
-
-2. **Create a separate array that links address, plans and their repective acceptance statuses.**  
+###### **Create a separate array that links address, plans and their repective acceptance statuses.**  
 ```json
 "address_plan_mappings": {
     "type": "array",
@@ -143,6 +143,6 @@ To address this limitation, the schema could be modified to include the acceptin
         "required": ["address", "plan_id", "accepting"]
     }
 }
-
+```
 
 [← Back to Home]({{ '/' | relative_url }})
