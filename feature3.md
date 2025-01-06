@@ -83,7 +83,8 @@ If any address or plan has a different acceptance status, it cannot be captured 
 
 **Potential Solution**
 To address this limitation, the schema could be modified to include the accepting status at a more granular level.  
-1. Associate plans with address
+1. Associate plans with address  
+
 ```
 "addresses": {
     "type": "array",
@@ -118,11 +119,10 @@ To address this limitation, the schema could be modified to include the acceptin
     },
     "minItems": 1
 }
-
 ```
 
-2. Create a separate array that links address, plans and their repective acceptance statuses.
-```
+2. Create a separate array that links address, plans and their repective acceptance statuses.  
+```json
 "address_plan_mappings": {
     "type": "array",
     "items": {
@@ -143,7 +143,6 @@ To address this limitation, the schema could be modified to include the acceptin
         "required": ["address", "plan_id", "accepting"]
     }
 }
-
 ```
 
 [← Back to Home]({{ '/' | relative_url }})
