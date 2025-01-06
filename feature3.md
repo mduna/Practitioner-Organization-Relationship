@@ -2,6 +2,7 @@
 layout: default
 title: Mermaid Diagram
 ---
+--number-sections
 ## Health Insurance Exchange Public Use Files (Exchange PUFs)
 The Centers for Medicare & Medicaid Services (CMS) Center for Consumer Information and Insurance Oversight (CCIIO) is committed to increasing transparency 
 in the Health Insurance Exchanges. While health plan information including benefits, copayments, premiums, and geographic coverage is publicly available on 
