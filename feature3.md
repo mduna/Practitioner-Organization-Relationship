@@ -43,8 +43,27 @@ federal platform for QHP eligibility and enrollment. The Machine-readable URL PU
 | URL Submitted | The URL containing the issuer's machine-readable provider, formulary, and plan JSON URLs | Text | URL Submitted | Free Text | Qultrics for the 2016 throught 2022 datasets; HIOS Supplemetal Submission Module (SSM) for the 2023 dataset; Marketplace plan Management System (MPMS) fpr tje 2-24 amd 2025 datasets | URL Submitted | N/A |
 | Tech POD Email | The email of the technical point of contact for the issuer organization | Text | Technical POC Email | Free Text |  Qultrics for the 2016 throught 2022 datasets; HIOS Supplemetal Submission Module (SSM) for the 2023 dataset; Marketplace plan Management System (MPMS) fpr tje 2-24 amd 2025 datasets | Technical POC email | N/A |
 
+#### Machine Readable Data
+Issuers seeking certification to offer QHPs on the Federally-facilitated Exchange (FFE) are required to submit provider and formulary data in a machine-readable 
+format to CMS and for posting on issuer websites. CMS’s machine-readable data initiative provides a structured and predictable dataset that supports the function 
+of HealthCare.gov’s Decision Support Tools, and is used by third-party application developers and researchers. HealthCare.gov and its Direct Enrollment partner 
+websites use machine-readable data to allow consumers to filter available QHPs based on the providers and drugs covered by those QHPs.  
 
+QHP issuers on the FFE are required to create a set of machine-readable data files using the JavaScript Object Notation (JSON) format specified by CMS. 
+There are four types of machine-readable data files: 
 
+1. Index files, which are used to organize and find the other file types.
+2. Plans files, which contain information on the QHPs offered by the issuer.
+3. **Provider files, which contain information identifying each participating provider in the issuer’s network.**
+4. Drugs or formulary files, which contain information about the drugs covered by the QHPs offered by the issuer.
+
+#### Machine Readable Tools
+1. [Knowledge Base](https://developer.cms.gov/marketplace-api/coverage-portal/#/knowledge)
+2. [Schema Overview](https://developer.cms.gov/marketplace-api/coverage-portal/#/schema)
+- [Index](https://developer.cms.gov/marketplace-api/coverage-portal/#/schema/index)
+- [Drugs](https://developer.cms.gov/marketplace-api/coverage-portal/#/schema/drugs)
+- [Healthplan](https://developer.cms.gov/marketplace-api/coverage-portal/#/schema/healthplan)
+- **[Provider](https://developer.cms.gov/marketplace-api/coverage-portal/#/schema/providers)**
 
 
 [← Back to Home]({{ '/' | relative_url }})
