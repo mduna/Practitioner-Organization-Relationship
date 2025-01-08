@@ -4,28 +4,28 @@ title: Data Model
 ---
 To model the scenario where a practitioner has multiple relationships with organizations, and an organization has multiple relationships with practitioners, with each relationship potentially having one or multiple types (e.g., attending, consulting), a relational data model is suitable.
 
-## Data Model
-### Entities
+## 1. Data Model
+### 1.1. Entities
 1. Practitioner: Represents individual healthcare practitioners.
 2. Organization: Represents healthcare organizations such as hospitals or clinics.
 3. PractitionerOrganizationRelationship: Represents the relationship between a practitioner and an organization, including the types of the relationship.
 4. RelationshipType: Represents the possible types of relationships (e.g., attending, consulting).
 
-### Table Structures
-**Practitioner**
+### 1.2. Table Structures
+#### 1.2.1. Practitioner
 - PractitionerID (Primary Key, Unique Identifier)
 - FirstName (String, e.g., "John")
 - LastName (String, e.g., "Doe")
 - Specialty (String, e.g., "Cardiology")
 - ContactInfo (String, optional)  
 
-**Organization**
+#### 1.2.2. Organization
 - OrganizationID (Primary Key, Unique Identifier)
 - Name (String, e.g., "Springfield General Hospital")
 - Address (String, optional)
 - ContactInfo (String, optional)
 
-**PractitionerOrganizationRelationship**
+#### 1.2.3. PractitionerOrganizationRelationship
 - RelationshipID (Primary Key, Unique Identifier)
 - PractitionerID (Foreign Key referencing Practitioner.PractitionerID)
 - OrganizationID (Foreign Key referencing Organization.OrganizationID)
@@ -33,23 +33,23 @@ To model the scenario where a practitioner has multiple relationships with organ
 - EndDate (Date, optional, when the relationship ended)
 - Notes (String, optional)
 
-**RelationshipType**
+#### 1.2.4. RelationshipType
 - RelationshipTypeID (Primary Key, Unique Identifier)
 - Name (String, e.g., "Attending", "Consulting")
 - Description (String, optional)
 
-**PractitionerOrganizationRelationshipType (Link Table)**
+#### 1.2.5. PractitionerOrganizationRelationshipType (Link Table)
 - RelationshipID (Foreign Key referencing PractitionerOrganizationRelationship.RelationshipID)
 - RelationshipTypeID (Foreign Key referencing RelationshipType.RelationshipTypeID)
 - Primary Key (Composite Key: RelationshipID + RelationshipTypeID)
 
 
-### Model Diagram
+### 1.3. Model Diagram
 ![Diagram Overview](/out/imageSource/modelDiagram/modelDiagram.png)
 
-### SQL script to create the schema
+### 1.4. SQL script to create the schema
 
-**Practitioner Table**  
+#### 1.4.1. Practitioner Table  
 ```
 CREATE TABLE Practitioner (
     PractitionerID INT PRIMARY KEY AUTO_INCREMENT,
@@ -60,7 +60,7 @@ CREATE TABLE Practitioner (
 );
 ```
 
-**Organization Table**  
+#### 1.4.2. Organization Table
 ```
 CREATE TABLE Organization (
     OrganizationID INT PRIMARY KEY AUTO_INCREMENT,
@@ -70,7 +70,7 @@ CREATE TABLE Organization (
 );
 ```
 
-**PractitionerOrganizationRelationship Table**  
+#### 1.4.3. PractitionerOrganizationRelationship Table
 ```
 CREATE TABLE PractitionerOrganizationRelationship (
     RelationshipID INT PRIMARY KEY AUTO_INCREMENT,
@@ -84,7 +84,7 @@ CREATE TABLE PractitionerOrganizationRelationship (
 );
 ```  
 
-**RelationshipType Table**  
+#### 1.4.4 RelationshipType Table
 ```
 CREATE TABLE RelationshipType (
     RelationshipTypeID INT PRIMARY KEY AUTO_INCREMENT,
@@ -94,7 +94,7 @@ CREATE TABLE RelationshipType (
 ```  
  
 
-**PractitionerOrganizationRelationshipType Table**  
+#### 1.4.5. PractitionerOrganizationRelationshipType Table
 ```
 CREATE TABLE PractitionerOrganizationRelationshipType (
     RelationshipID INT NOT NULL,

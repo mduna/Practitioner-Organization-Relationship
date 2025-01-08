@@ -4,10 +4,10 @@ title: Ensure data Accuracy
 ---
 
 
-## Ensure Data Accuracy
+## 1. Ensure Data Accuracy
 To ensure data accuracy based on mutual attestation, we can implement logic that validates the agreement between a practitioner and an organization before inserting the relationship into the database. This can be achieved by creating a staging table for unverified relationships and adding a stored procedure that validates mutual attestation.
 
-### Staging Table Schema
+### 1.1. Staging Table Schema
 **Staging Table for Unverified Relationships**  
 ```
 CREATE TABLE StagingPractitionerOrganizationRelationship (
@@ -25,7 +25,7 @@ CREATE TABLE StagingPractitionerOrganizationRelationship (
 ```  
 
 
-### Stored Procedure for Mutual Attestation Validation  
+### 1.1.2. Stored Procedure for Mutual Attestation Validation  
 ```
 DELIMITER $$
 
